@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=display-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>Survey Form</title>
+
+    </head>
+
+    <body>
+        <header>
+            <h1 id="title">My Survey Form</h1>
+            <p id="description">Please give some nice feedback</p>
+        </header>
+
+        <main>
+            <form action="" id="survey-form">
+                <fieldset>
+                    <label id="name-label">Enter your name: 
+                        <input id="name" type="text" required placeholder="e.g. John Smith">
+                    </label>
+                    <label id="email-label">Enter your email: 
+                        <input id="email" type="email" required placeholder="e.g.jsmith@example.com">
+                    </label>
+                    <label id="number-label">Enter a number: 
+                        <input id="number" type="number" required min="1" max="100" placeholder="e.g.42">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label>Gender:</label>
+                    <select id="dropdown">
+                        <option value="">Please select</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Rather not say</option>
+                    </select>
+                    <label>Age group:
+                        <label id=""><input type="radio" name="ageGroup" value="1" class="inline">1-19</label>
+                        <label id=""><input type="radio" name="ageGroup" value="2" class="inline">20-39</label>
+                        <label id=""><input type="radio" name="ageGroup" value="3" class="inline">40-69</label>
+                        <label id=""><input type="radio" name="ageGroup" value="4" class="inline">70-99</label>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label>Checkbox area:
+                        <label for=""><input type="checkbox" name="choices" id="first" value="1" class="inline">First</label>
+                        <label for=""><input type="checkbox" name="choices" id="second" value="2" class="inline">Second</label>
+                        <label for=""><input type="checkbox" name="choices" id="third" value="3" class="inline">Third</label>
+                    </label>
+                    <label>Additional comments:
+                        <textarea rows="5" cols="50"></textarea>
+                    </label>
+                </fieldset>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </main>
+    </body>
+</html>

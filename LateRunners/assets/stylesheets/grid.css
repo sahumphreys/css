@@ -1,0 +1,207 @@
+:root {
+    /* fonts */
+    --ff-primary: Lato, sans-serif;
+    --ff-secondary: 'Open Sans',  sans-serif;
+    /* shades of grey */
+    --clr-grey-1: hsl(0, 0%, 10%);
+    --clr-grey-2: hsl(0, 0%, 25%);
+    --clr-grey-3: hsl(0, 0%, 46%);
+    --clr-grey-4: hsl(0, 0%, 83%);
+    --clr-grey-5: hsl(0, 0%, 96%);
+    /* main primary colour */
+    --clr-green-1: hsl(142,100%,10%);           
+    --clr-green-2: hsl(142,100%,25%);
+    --clr-green-3: hsl(142,100%,46%);
+    --clr-green-4: hsl(142,100%,83%);
+    --clr-green-5: hsl(142,100%,96%);
+    /* main secondary colour (1) */
+    --clr-orange-1: hsl(39,100%,10%);       
+    --clr-orange-2: hsl(39,100%,25%);
+    --clr-orange-3: hsl(39,100%,46%);
+    --clr-orange-4: hsl(39,100%,83%);
+    --clr-orange-5: hsl(39,100%,96%);
+    /* main secondary colour (2) */
+    --clr-purple-1: hsl(308, 100%, 10%);
+    --clr-purple-2: hsl(308,100%, 25%);
+    --clr-purple-3: hsl(308, 100%,46%);
+    --clr-purple-4: hsl(308,100%,83%);
+    --clr-purple-5: hsl(308,100%,96%);
+    --clr-black: #40401B;
+    --clr-white: hsl(0, 0%, 100%);
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-secondary);
+    /* width: 100%; */
+    /* height: 100%; */
+    /* box-sizing: border-box; */
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1,h2,h3,h4 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+/* LAYOUT ELEMENTS */
+.grid {
+    background-color: #444;
+    color: #fff;
+    /* padding: 25px; */
+    font-size: 3rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px 25px;
+}
+
+header {
+    grid-column: 1 / span 2;
+    background-color: var(--clr-purple-2);
+    color: var(--clr-purple-5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+#logo {
+    font-family: var(--ff-primary);
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-left:2rem;
+    text-transform: uppercase;
+}
+
+#top-nav {
+    margin: 0;
+}
+
+#nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-item a {
+    font-family: var(--ff-secondary);
+    text-transform: capitalize;
+    margin: 0 1rem;
+    color: var(--clr-purple-5);
+}
+
+.nav-item a:hover {
+    color: var(--clr-orange-4);
+    cursor: pointer;
+}
+
+.sidebar {
+    grid-column: 1 / 1;
+    grid-row: 2 / 3;
+    background-color: var(--clr-white);
+    color: var(--clr-purple-1);
+}
+
+.intro {
+    font-family: var(--ff-secondary);
+    margin-left: 1rem;
+}
+
+.intro p {
+    font-size: 1.2rem;;
+}
+
+.main {
+    padding: 20px;
+    border: 5px solid var(--clr-gray-500);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    gap: 1rem;
+}
+
+.card {
+    border: 1px solid var(--clr-black);
+    border-radius : 6px;
+    padding: .5rem;
+}
+
+.card-title {
+    font-family: var(--ff-primary);
+    color: var(--clr-purple--1);
+    background-color: var(--clr-gray-400);
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card-image-container {
+    padding: 20px;
+}
+.card-image {
+    width: 100%;
+    height: 100%;
+    border-radius : 50%;
+}
+
+.card-body-container {
+    padding: 10px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.extra {
+    grid-column: 2/ span 1;
+    grid-row: 3 / span 1;
+}
+
+.footer {
+    grid-column: 1 / span 2;
+    grid-row: 4 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--clr-black);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#copyright {
+    color: var(--clr-purple-5);
+}

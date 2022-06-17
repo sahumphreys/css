@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EBE7E7;
+}
+
+.header {
+    padding: 32px;
+    margin: 0px auto;
+    text-align: center;
+    background-color: #E0DDDD;
+}
+
+#gallery {
+    display: flex;                      /* align in one dimension, row or column */
+    flex-direction: row;                /* set the direction */
+    flex-wrap: wrap;                    /* allow them to flow to the next line */
+    justify-content: center;            /* center items along the main axis */
+    align-items: center;                /* positions along the cross-axis (vertical here) */
+    padding: 0 4px;
+}
+
+#gallery  img {
+    width: 25%;
+    height: 300px;
+    object-fit: cover;                  /* tells image to fill the container, maintaining aspect ratio, it will crop to fit */
+    margin-top: 8px;                    /* put some space between the images */
+    padding: 0 4px;
+    border-radius: 10px;                /* smooth out the images */
+}
+
+@media (max-width:800px) {              /* for screens smaller then 800px */
+    #gallery img {
+      width: 50%;
+    }
+}
+
+@media (max-width:600px) {              /* for screens smaller than 600px */
+    #gallery img {
+        width: 100%;
+    }
+}

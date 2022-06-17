@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sansdisplay=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Technical Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>OCR Reference Language</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Comments">Comments</a></li>
+            <li><a class="nav-link" href="#Operators">Operators</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Casting">Casting</a></li>
+            <li><a class="nav-link" href="#Input_Output">Input Output</a></li>
+            <li><a class="nav-link" href="#Selection">Selection</a></li>
+            <li><a class="nav-link" href="#Iteration">Iteration</a></li>
+            <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+            <li><a class="nav-link" href="#String_Operations">String Operations</a></li>
+            <li><a class="nav-link" href="#Random_Numbers">Random Numbers</a></li>
+            <li><a class="nav-link" href="#File_Handling">File Handling</a></li>
+            <li><a class="nav-link" href="#Sub_Programs">Sub Programs</a></li>
+        </ul>
+
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    For the new OCR GCSE Computer Science (J277) a reference language has been introduced: the OCR Reference Language (OCL). The goal is to ensure some consistency across the questions being asked but it can also be used for answering programming questions too.
+                </p>
+
+                <p>
+                    Thus, a question might include the following code fragment using OCL to carry out validation on data input by the user:
+                </p>
+                    
+<code>valid = false
+while(valid == false)
+    studentName = input("Enter the student name")
+    if (studentName.length > 0) AND (studentName.length < 30)
+        valid = true
+    else
+        print("Student name is not valid")
+    endif
+endwhile</code>
+                
+                <p>
+                    The assignment of variables, dealing with input and output looks similar to Python:
+                    but the loop and if statement are different:
+                    <ul>
+                        <li>A colon <span class="inline">(':')</span> is not used at the end of these lines</li>
+                        <li>The <span class="inline">if</span> statement has a closing <span class="inline">endif</span></li>
+                        <li>The <span class="inline">while</span> statement has a closing <span class="inline">endwhile</span></li>
+                    </ul>
+                </p>
+                <p>
+                    This document covers the key components of the reference language and compares the language to similar constructs and statements used in Python.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Comments">
+            <header>Comments</header>
+            <article>
+                <p>Comments are used to explain why a particular sequence of instructions, or algorithm, is being used.  They act as "notes to self" and play an important job of keeping your code maintainable.</p>
+
+                <p>There is a balance to be kept here.  Too many comments are unnecessary noise, and too few can make your code harder to understand for others.  We can cut down on the number of comments by using sensible naming conventions e.g. </p>
+
+                <code>
+                // initialising the score to zero
+                x = 0
+                </code>     
+
+                <p>We could avoid using a comment by changing the name of the variable e.g.</p>
+
+                <code>
+                score = 0
+                </code>
+
+                <p>Python uses '#' for comments.  Here, two forward slashes, '//' are used.</p>
+                
+            </article>
+        </section>
+
+        <section class="main-section" id="Operators">
+            <header>Operators</header>
+            <article>
+                <p>
+                    The standard set of operators are used in ORL:
+                </p>
+                <h3>Arithmetic</h3>
+                <p>
+                    For example:
+                </p>
+                    <code>
+                        n = 4 + 5       // Addition <br>
+                        n = 12 - 9      // Subtraction <br>
+                        n = 3 * 7       // Multiplication <br>
+                        n = 12 / 4      // Division <br>
+                        n = 7 DIV 2     // Quotient <br>
+                        n = 7 MOD 2     // Modulus <br>
+                    </code>
+                <p>
+                    NB. Integer division and modulus are different to Python
+                </p>
+                <h3>Comparison</h3>
+                <p>For example:</p>
+                <code>
+                    age == 18 // Equality<br>
+                    score != 0 // Not equal to <br>
+                    total < 0   // Less than <br>
+                    total > 0   // greater than <br>
+                    sum <= 50   // less than or equal to <br>
+                    sum >= 50   // greater than or equal to
+                </code>
+                <h3>Logical</h3>
+                <p>For example:</p>
+                <code>
+                    age >= 11 AND age <= 18     // AND <br>
+                    score < 10 OR score > 5     // OR <br>
+                    NOT day == "Monday"         // NOT <br>
+                </code>
+
+                <p>
+                    These are all the same as used in Python
+                </p>
+
+                <p>Do not forget:
+                    <ul>
+                        <li>Do not confuse the equality operator ("==") with the assignment operator ("!=")</li>
+                        <li>Always check if the "=" needs to be included when using greater than or less than comparison operators</li>
+                    </ul>
+                </p>
+                
+            </article>
+        </section>
+
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article></article>    
+        </section>
+
+        <section class="main-section" id="Casting">
+            <header>Casting</header>            
+            <article></article>
+        </section>
+
+        <section class="main-section" id="Input_Output">
+            <header>Input Output</header>
+            <article></article>
+        </section>
+
+        <section class="main-section" id="Selection">
+            <header>Selection</header>
+            <article></article>    
+        </section>
+
+        <section class="main-section" id="Iteration">
+            <header>Iteration</header>
+            <article></article>
+        </section>
+
+        <section class="main-section" id="Arrays">
+            <header>Arrays</header>
+            <article></article>
+        </section>
+
+        <section class="main-section" id="String_Operations">
+            <header>String Operations</header>
+            <article></article>
+        </section>
+
+        <section class="main-section" id="Random_Numbers">
+            <header>Random Numbers</header>
+            <article></article>
+        </section>
+
+        <section class="main-section" id="File_Handling">
+            <header>File Handling</header>
+            <article></article>
+        </section>
+
+        <section class="main-section" id="Sub_Programs">
+            <header>Sub Programs</header>
+            <article></article>
+        </section>
+    </main>
+    
+</body>
+</html>

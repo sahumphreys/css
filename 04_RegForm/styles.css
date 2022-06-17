@@ -1,0 +1,80 @@
+body {
+    width : 100%;
+    height: 100vh;
+    margin: 0;                      /* remove the scrollbar */
+    background-color: #1b1b32;    /* easier on the eyes */    
+    color: #f5f6f7;               /* make text stand out */ 
+    font-family: Tahoma;
+    font-size: 16px; 
+}
+
+label {
+    display:block;                  /* to put on separate lines */
+    margin: 0.5rem 0;               /* slight separation */
+}
+
+h1, p {
+    margin: 1em auto;               /* center the text for h1 and p */
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;                 /* center the form, fix max and min widths */
+    max-width: 500px;
+    min-width: 300px;
+    width : 60vw;
+    padding-bottom: 2em;
+
+}
+
+fieldset {                          /* remove borders and add a padding to top and bottom */
+    border: 0;
+    padding: 2rem 0 2rem 0;
+}
+
+fieldset:not(:last-of-type) {       /* add border to each fieldset, except for the last one */
+    border-bottom: 3px solid #3b3b4f;
+}
+
+input, textarea, select {           /* make labels appear on top by setting child width to 100% */
+    width: 100%;
+    margin: 10px 0 0 0;
+    color: #ffffff;               /* make sure the test can be seen, and enough space to type */
+    min-height: 2em;
+
+}
+
+input, textarea {                   /* make input and text area elements blend with backround */
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    
+  }
+
+select {
+    color: #3b3b4f;
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;            /* add space between inline elements and label text */
+    vertical-align: middle;         /* fix inline elements being too high */
+}
+
+input[type="submit"] {              /* Using an attribute selector */
+    display: block;
+    margin: 0 auto;                 /* center the form, fix max and min widths */
+    min-width: 300px;               /* separate button from fieldset and adjust width */
+    margin: 1em auto;
+    height: 2em;                    /* in keeping with the rest of the form */
+    font-size: 1.1rem;
+    background-color: #3b3b4f;    /* Make button more distinct */
+    border-color: white;
+}
+
+input[type="file"] {                /* make this element have same padding as other inputs */
+    padding: 1px 2px;
+}
+
+a {
+    color: #dfdfe2;
+  }

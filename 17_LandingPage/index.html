@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- font awesome -->
+    <title>Landing Page</title>
+</head>
+<body>
+    <header id="header" >
+        <!-- simple logo and text -->
+        <a href="" id="logo-container">
+            <img src="./img/learner-runners.png" alt="Late Runners logo" id="header-img">
+            <!-- <div id="brand"><i id="learner">L</i>ate <i class="fa-solid fa-person-running"></i>unners </div> -->
+        </a>
+        <!-- the navigation bar, fixed -->
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#running" class="nav-link">Running</a></li>
+                <li><a href="#coaching" class="nav-link">Coaching Tips</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <article id="running" class="anchor">
+        <h2 class="w3-text-theme">Running Plans</h2>
+        <section class="cards">
+            <article class="card">
+                <p class="card-title">Getting Started</p>
+                <div class="card-body">
+                    <img src="./img/c25k.png" alt="couch to 5k">
+                    <p class="card-text">Far and away the best program to get started with running.</p>
+                    <button class="card-link">Find out more ...</button>
+                </div>
+            </article>
+            <article class="card">
+                <p class="card-title">The 10k</p>
+                <div class="card-body">
+                    <img src="./img/10k.png" alt="couch to 5k">
+                    <p class="card-text">Taking the next step from 5k to 10k can be a challenge ...</p>
+                    <button class="card-link">Find out more ...</button>
+            </article>
+            <article class="card">
+                <p class="card-title">Half Marathon</p>
+                <div class="card-body">
+                    <img src="./img/half.png" alt="couch to 5k">
+                    <p class="card-text">Probably quite enough for most of us the half marathon, it's do-able!</p>
+                </div>  
+                <div>
+                    <button class="card-link">Find out more ...</button>
+                </div>
+            </article>
+            <article class="card">
+                <p class="card-title">The Marathon</p>
+                <div class="card-body">
+                    <img src="./img/marathon.png" alt="couch to 5k">
+                    <p class="card-text">The ultimate challenge, unless an ultra is your goal ...</p>
+                </div>
+                <div>
+                    <button class="card-link">Find out more ...</button>
+                </div>
+            </article>
+        </section>        
+    </article>
+    
+    <article id="coaching" class="anchor">
+        <h2>Coaching Tips</h2>
+        <p>Video here for coaching tips</p>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Hbl25jyvVMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    
+    <article id="about" class="anchor">
+        <h2>About Late Runners</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, sunt, voluptatum fugiat quos exercitationem perferendis adipisci voluptate deserunt ipsum aliquid aspernatur nulla minima iusto aperiam sint atque pariatur quas? Esse?</p>
+    </article>
+
+    <article id="contact" class="anchor">
+        <h2>Keep in touch!</h2>
+        <p>Sign up to receive our regular newsletter to keep you running ...</p>
+        <form action="https://www.freecodecamp.com/email-submit" id="form" >
+            <!-- <ul class="lr-flex">
+                <li><label for="email">Sign up for our newsletter:</label></li>
+                <li><input type="email" name="email" id="email" placeholder="e.g. psmith@example.com"></li>
+                <li><input type="submit" id="submit" class="btn" value="Submit"></li>
+            </ul> -->
+            <label for="email">Sign up for our newsletter:</label>
+            <input type="email" name="email" id="email" placeholder="e.g. psmith@example.com" required>
+            <input type="submit" id="submit" class="btn" value="Submit">
+
+        </form> 
+    </article>
+
+    <footer>
+        footer
+    </footer>
+</body>
+</html>

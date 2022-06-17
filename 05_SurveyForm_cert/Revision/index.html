@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+
+            <h1 id="title" class="text-center">
+                Late Runners Survey Form
+            </h1>
+            <p id="description" class="description text-center">
+                Please tell us a bit more about yourself!
+            </p>
+            
+            <form action="" id="survey-form">
+                <!-- name -->
+                <div class="form-group">
+                    <label for="name" id="name-label">Name:<span class="hint">(required)</span></label>
+                    <input type="text" name="name" id="name" class="form-control text" placeholder="Enter your name ..." required>
+                </div>
+                <!-- email -->
+                <div class="form-group">
+                    <label for="email" id="email-label">Email:<span class="hint">(required)</span></label>
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email ..." required>
+                </div>
+                <!-- age as a number -->
+                <div class="form-group">
+                    <label for="age" id="age-label">Age:<span class="hint">(optional)</span></label>
+                    <input type="number" name="age" id="age" class="form-control" placeholder="Your age last birthday ..." min="18" max="99">
+                </div>
+               <!-- gender -->
+                <div class="form-group">
+                    <p>What is your gender?</p>
+                    <label for="">
+                        <input type="radio" name="gender" id="male" value="male" class="input-radio">Male
+                    </label>
+                    <label for="">
+                        <input type="radio" name="gender" id="female" value="female" class="input-radio">Female
+                    </label>
+                    <label for="">
+                        <input type="radio" name="gender" id="other" value="other" class="input-radio" checked>Prefer not to say
+                    </label>
+                </div>
+                <!-- best distance -->
+                <div class="form-group">
+                    <p>What is the furthest distance you have run?</p>
+                    <select name="distance" id="dropdown" class="form-control">
+                        <option value="">Select the maximum distance</option>
+                        <option value="">Less than 5km</option>
+                        <option value="5k">5km</option>
+                        <option value="10k">10km</option>
+                        <option value="half">Half-marathon</option>
+                        <option value="marathon">Marathon</option>
+                        <option value="ultra">Beyond Marathon (ultra)</option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <!-- race? -->
+                <div class="form-group">
+                    <p>Have you entered races for any/all of the following distances: </p>
+                    <label for=""><input type="checkbox" name="" id="" class="input-checkbox">5km</label>
+                    <label><input type="checkbox" name="" id="" class="input-checkbox">10km</label>
+                    <label for=""><input type="checkbox" name="" id="" class="input-checkbox">Half-marathon</label>
+                    <label for=""><input type="checkbox" name="" id="" class="input-checkbox">Marathon</label>
+                    <label for=""><input type="checkbox" name="" id="" class="input-checkbox">Ultra-marathon</label>
+                </div>
+                <div class="form-group">
+                    <label for="" id="comments-label">Further comments:</label>
+                    <textarea name="comments" id="comments" cols="30" rows="10" class="input-textarea"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="submit-button">Submit</button>
+                </div>
+                </form>
+        </header>
+    </div>
+</body>
+</html>

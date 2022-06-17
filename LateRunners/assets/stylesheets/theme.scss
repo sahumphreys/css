@@ -1,0 +1,101 @@
+$primary-color: #A21A91;
+
+h1 {
+    color: $primary-color;
+}
+$theme-colors: (
+   "primary" : #626ED4,
+   "secondary" : #343549,
+   "success": #2AA39A,
+   "danger": #EC4561,
+   "warning": #F8B425,
+   "info": #38A5F8,
+   "light": #f8f8fa,
+   "dark": #575c62,
+   "muted": #EDECF1
+);
+
+.my-btn{
+    display: inline-block;
+  
+    padding: .375rem .75rem;
+   
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+   
+    border: 1px solid transparent;
+    border-radius: .25rem;
+  
+    color: #212529;
+    background-color: transparent;
+    &:hover{
+        cursor: pointer;
+    }  
+ }
+
+ @each $name,$color in $theme-colors {
+    .btn-#{$name}{
+        background-color: $color;
+        color: white;
+    }
+ }
+
+
+ $no-of-columns: 12;
+
+$breakpoints: (
+   "sm": 576px,
+   "md": 768px,
+   "lg": 992px,
+   "xl": 1200px
+);
+ 
+.container{
+   display: block;
+   width: 100%;
+   max-width: 1170px;
+  
+   padding: 0px 1rem;
+   margin: 0px auto;
+ 
+   &-fluid{
+       display: flex;
+       flex-direction: column;
+  
+       width: 100%;
+      
+       padding: 1rem 0px;
+   }
+}
+ 
+.row{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+
+@each $breakpoint,$value in $breakpoints {
+    // MEDIA QUERY
+    @media only screen and (min-width: $value) {
+        // RESPONSIVE COLUMN CODE .....
+        @for $i from 1 through $no-of-columns {
+            .col-#{$breakpoint}-#{$i} {
+                width: (100% /  ( $no-of-columns / $i))  ;  
+                padding: 0px 1rem;
+            }
+        }
+    }
+}
+
+// @media only screen and (max-width: $extra-small-screen-width-breakpoint) {
+//     // RESPONSIVE COLUMN CODE .....
+//     @for $i from 1 through $no-of-columns {
+//         .col-#{$i} {
+//             width: (100% /  ( $no-of-columns / $i))  ;  
+//             padding: 0px 1rem;
+//         }
+//     }
+// }

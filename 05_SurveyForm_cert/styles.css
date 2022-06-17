@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding : 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100wvh;
+    font-size: 16px;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-family: Merriweather;
+    color : rgb(127,0,127);
+}
+
+h1, p {
+    margin: 1em auto;               /* center the text for h1 and p */
+    text-align: center;
+}
+
+
+/*
+==============================================================================
+CLASSES
+==============================================================================
+*/
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 1em;            /* add space between inline elements and label text */
+    vertical-align: middle;   
+}
+
+/*
+==============================================================================
+FORM ELEMENTS
+==============================================================================
+*/
+
+form {
+    margin : 0 auto;
+    max-width: 600px;
+    min-width: 300px;
+    /*width: 70vw;*/
+    padding-bottom: 2em;
+    background-color: lightblue;
+    padding: 30px;
+    border: 2px solid rgb(127,0,127);
+    border-radius: 10px;
+}
+
+fieldset {
+    border : 0;
+    margin: 0 ;
+}
+
+fieldset:not(:last-of-type) {       /* add border to each fieldset, except for the last one */
+    border-bottom: 3px solid #cccccc;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    min-height: 2em;
+    margin: 10px 0 0 0;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    min-width: 300px;               /* separate button from fieldset and adjust width */
+    margin: 1em auto;
+    height: 2em;                    /* in keeping with the rest of the form */
+    font-size: 1.1rem;
+}
